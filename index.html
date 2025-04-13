@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Vehicle Breakdown Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Emergency Vehicle Breakdown Services</h1>
+            <p>24/7 Assistance for Stranded Vehicles</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="services-container">
+            <div class="form-container">
+                <h2>Request Emergency Service</h2>
+                <form id="emergency-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Current Location:</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="vehicle">Vehicle Details:</label>
+                        <input type="text" id="vehicle" name="vehicle" placeholder="Make, Model, Year, Color" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Needed:</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Select Service --</option>
+                            <option value="towing">Towing Service</option>
+                            <option value="fuel">Emergency Fuel Delivery</option>
+                            <option value="mechanic">Mobile Mechanic</option>
+                            <option value="battery">Battery Jump Start</option>
+                            <option value="tire">Flat Tire Assistance</option>
+                            <option value="lockout">Vehicle Lockout Service</option>
+                            <option value="other">Other Assistance</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="other-service-container" style="display: none;">
+                        <label for="other-service">Specify Other Service:</label>
+                        <input type="text" id="other-service" name="other-service">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Emergency Description:</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Submit Emergency Request</button>
+                </form>
+            </div>
+            
+            <div class="request-details" id="request-details">
+                <h2>Your Request Details</h2>
+                <div id="request-confirmation" class="hidden">
+                    <div class="confirmation-message">
+                        <h3>Request Submitted Successfully!</h3>
+                        <p>Our team has been notified and will respond shortly.</p>
+                        <p class="response-time">Expected response time: <span class="highlight">15-30 minutes</span></p>
+                    </div>
+                    <div class="request-info">
+                        <h3>Request Information</h3>
+                        <div id="request-summary"></div>
+                    </div>
+                </div>
+                <div id="no-request" class="initial-message">
+                    <p>Submit a request to see details here</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="container">
+        <div class="info-section">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Submit Request</h3>
+                    <p>Fill out the emergency assistance form with your details and specific needs.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Quick Response</h3>
+                    <p>Our team will contact you within minutes to confirm your request and provide ETA.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Help</h3>
+                    <p>Our professional technicians will arrive at your location to provide the requested service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Emergency Vehicle Breakdown Services. 24/7 Emergency: <strong>555-HELP (4357)</strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

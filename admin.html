@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Emergency Vehicle Breakdown Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+    <header class="admin-header">
+        <div class="container">
+            <h1>Emergency Services Admin Dashboard</h1>
+            <div class="admin-controls">
+                <span id="refresh-status">Auto-refresh: Active</span>
+                <button id="toggle-refresh" class="btn-admin">Pause Auto-refresh</button>
+                <button id="manual-refresh" class="btn-admin">Refresh Now</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container admin-container">
+        <div class="dashboard-header">
+            <h2>Emergency Service Requests</h2>
+            <div class="filter-controls">
+                <select id="status-filter">
+                    <option value="all">All Requests</option>
+                    <option value="new">New Requests</option>
+                    <option value="inprogress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <input type="text" id="search-requests" placeholder="Search requests...">
+            </div>
+        </div>
+
+        <div class="requests-container">
+            <div class="requests-list" id="requests-list">
+                <!-- Request items will be populated by admin.js -->
+                <div class="request-item" data-id="1678901234567">
+                    <div class="request-header">
+                        <span class="request-name">John Doe</span>
+                        <span class="request-time">3/22/2025, 10:30:00 AM</span>
+                    </div>
+                    <div class="request-meta">
+                        <span class="request-service">Flat Tire Assistance</span>
+                        <span class="request-status status-new">NEW</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="request-detail-panel" id="request-detail-panel">
+                <div class="panel-default">
+                    <h3>Select a request to view details</h3>
+                </div>
+                <div class="panel-content hidden" id="detail-content">
+                    <div class="detail-header">
+                        <div class="request-id" id="detail-id"></div>
+                        <div class="status-controls">
+                            <select id="status-update">
+                                <option value="new">New</option>
+                                <option value="inprogress">In Progress</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                            <button id="update-status" class="btn-admin">Update</button>
+                        </div>
+                    </div>
+                    <div class="detail-content" id="detail-fields"></div>
+                    <div class="detail-actions">
+                        <button id="assign-tech" class="btn-admin">Assign Technician</button>
+                        <button id="contact-customer" class="btn-admin">Contact Customer</button>
+                    </div>
+                    <div class="detail-notes">
+                        <h4>Notes</h4>
+                        <textarea id="request-notes" placeholder="Add notes about this request..."></textarea>
+                        <button id="save-notes" class="btn-admin">Save Notes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Emergency Vehicle Breakdown Services - Admin Portal</p>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
