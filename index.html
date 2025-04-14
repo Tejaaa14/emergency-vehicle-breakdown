@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Vehicle Breakdown Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <!-- Updated image path -->
+                    <img src="https://cdn.vectorstock.com/i/2000v/29/70/car-and-breakdown-triangle-vector-11992970.avif" alt="Emergency Vehicle Breakdown Services Logo">
+                </div>
+                <div class="header-text">
+                    <h1>Emergency Vehicle Breakdown Services</h1>
+                    <p>24/7 Assistance for Stranded Vehicles</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="services-container">
+            <div class="form-container">
+                <h2>Request Emergency Service</h2>
+                <form id="emergency-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Current Location:</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="vehicle">Vehicle Details:</label>
+                        <input type="text" id="vehicle" name="vehicle" placeholder="Make, Model, Year, Color" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Needed:</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Select Service --</option>
+                            <option value="towing">Towing Service</option>
+                            <option value="fuel">Emergency Fuel Delivery</option>
+                            <option value="mechanic">Lockout Assistance</option>
+                            <option value="battery">Battery Jump Start</option>
+                            <option value="tire">Flat Tire Assistance</option>
+                            <option value="lockout">Vehicle Lockout Service</option>
+                            <option value="other">Minor Mechanical Repairs</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="other-service-container" style="display: none;">
+                        <label for="other-service">Specify Other Service:</label>
+                        <input type="text" id="other-service" name="other-service">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Emergency Description:</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Submit Emergency Request</button>
+                </form>
+            </div>
+            
+            <div class="request-details" id="request-details">
+                <h2>Your Request Details</h2>
+                <div id="request-confirmation" class="hidden">
+                    <div class="confirmation-message">
+                        <h3>Request Submitted Successfully!</h3>
+                        <p>Our team has been notified and will respond shortly.</p>
+                        <p class="response-time">Expected response time: <span class="highlight">15-30 minutes</span></p>
+                    </div>
+                    <div class="request-info">
+                        <h3>Request Information</h3>
+                        <div id="request-summary"></div>
+                    </div>
+                </div>
+                <div id="no-request" class="initial-message">
+                    <p>Submit a request to see details here</p>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Add Core Services section below the form -->
+    <section class="core-services">
+        <h2>Our Core Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🚨</div>
+                <h3>24/7 Emergency Assistance</h3>
+                <ul>
+                    <li><strong>Immediate help</strong> for vehicle breakdowns</li>
+                    <li><strong>Live tracking</strong> of the rescue vehicle</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🚚</div>
+                <h3>Towing Services</h3>
+                <ul>
+                    <li>Car/bike towing to the <strong>nearest garage</strong></li>
+                    <li>Options for <strong>flatbed, wheel-lift</strong>, etc.</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>On-Spot Repairs</h3>
+                <ul>
+                    <li><strong>Jump start</strong> for dead batteries</li>
+                    <li><strong>Flat tire</strong> repair or replacement</li>
+                    <li>Minor mechanical fixes</li>
+                    <li><strong>Emergency fuel</strong> delivery</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🔄</div>
+                <h3>Roadside Assistance Plans</h3>
+                <ul>
+                    <li><strong>Monthly/yearly plans</strong> for frequent travelers</li>
+                    <li>Benefits like <strong>priority service</strong>, free towing</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">📍</div>
+                <h3>Real-time Tracking & ETA</h3>
+                <ul>
+                    <li>Show <strong>how far</strong> the rescue van is</li>
+                    <li><strong>Live map</strong> integration</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Garage/Mechanic Network</h3>
+                <ul>
+                    <li><strong>Partnered garages</strong> for repairs</li>
+                    <li><strong>Ratings and reviews</strong> for each</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">👤</div>
+                <h3>User Account & History</h3>
+                <ul>
+                    <li>Track <strong>past service requests</strong></li>
+                    <li><strong>Rebook or repeat</strong> a request easily</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">💬</div>
+                <h3>Contact & Chat Support</h3>
+                <ul>
+                    <li><strong>24/7 live chat</strong> or call support</li>
+                    <li><strong>Emergency response</strong> team</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Multilingual Support</h3>
+                <ul>
+                    <li>Support in <strong>multiple languages</strong></li>
+                    <li>Especially useful in <strong>diverse regions</strong></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="add-ons">
+            <h3>Optional Add-On Services</h3>
+            <div class="addon-items">
+                <span class="addon-item"><strong>Vehicle insurance</strong> claim assistance</span>
+                <span class="addon-item"><strong>Emergency ambulance</strong> services</span>
+                <span class="addon-item"><strong>Spare parts</strong> ordering</span>
+                <span class="addon-item"><strong>Traffic police</strong> integration</span>
+                <span class="addon-item"><strong>Women-safe</strong> technician option</span>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <section class="container">
+        <div class="info-section">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Submit Request</h3>
+                    <p>Fill out the emergency assistance form with your details and specific needs.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Quick Response</h3>
+                    <p>Our team will contact you within minutes to confirm your request and provide ETA.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Help</h3>
+                    <p>Our professional technicians will arrive at your location to provide the requested service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Emergency Vehicle Breakdown Services. 24/7 Emergency: <strong>555-HELP (4357)</strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
