@@ -32,6 +32,17 @@ To run the project locally:
 
 1. **Clone the repository:**
 
-```bash
+
 git clone https://github.com/yourusername/emergency-vehicle-breakdown.git
 cd emergency-vehicle-breakdown
+
+---
+### 🧾 User Request Form
+![User Form](images/user-form.png)
+
+### 🛠️ Admin Dashboard
+![Admin Dashboard](images/admin-dashboard.png)
+
+### 📋 Request Detail Panel
+![Detail Panel](images/request-detail.png)
+
