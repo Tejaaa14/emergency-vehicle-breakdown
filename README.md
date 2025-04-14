@@ -57,13 +57,13 @@ To run the project locally:
 ## 📷 Screenshots
 
 ### 🧾 User Request Form  
-![User Form](images/user-form.png)
+![User Form](assets/user-form.png)
 
 ### 🛠️ Admin Dashboard  
-![Admin Dashboard](images/admin-dashboard.png)
+![Admin Dashboard](assets/admin-dashboard.png)
 
 ### 📋 Request Detail Panel  
-![Detail Panel](images/request-detail.png)
+![Detail Panel](assets/request-detail.png)
 
 ---
 
